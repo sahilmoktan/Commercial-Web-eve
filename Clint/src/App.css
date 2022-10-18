@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+}
+
+.parent {
+  display: flex;
+}
+.box {
+  background-color: aqua;
+  height: 140px;
+  width: 140px;
+  margin: 10px;
+}
