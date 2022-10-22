@@ -2,6 +2,7 @@
 recap class evening for Commercial Web
 
 
+(sat/22oct)
 folder managed in server code,
 
 redux, redux-thunk, react-reduc installed,
