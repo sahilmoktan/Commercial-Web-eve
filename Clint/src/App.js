@@ -1,17 +1,18 @@
 import { useState } from "react";
-// import "./App.css";
+import "./App.css";
 // import Button from './Button'
-// import Products from "./products";
+// import Product from "./component/Product";
+
 const App = () => {
   const [name, setName] = useState(" ");
   const [email, setEmail] = useState(" ");
   const [password, setPassword] = useState(" ");
 
-  const checkInDatabase = () => {
-    fetch(`https://127.0.0.1:3000/users/${name}`);
-    fetch(`https://127.0.0.1:3000/users/${email}`);
-    fetch(`https://127.0.0.1:3000/users/${password}`);
-  };
+  // const checkInDatabase = () => {
+  //   fetch(`https://127.0.0.1:3000/users/${name}`);
+  //   fetch(`https://127.0.0.1:3000/users/${email}`);
+  //   fetch(`https://127.0.0.1:3000/users/${password}`);
+  // };
 
   const registerUser = async () => {
     const requestOption = {
@@ -20,6 +21,15 @@ const App = () => {
       body: JSON.stringify({ name: name, email: email, password: password }),
     };
     fetch("http://localhost:3000/register", requestOption);
+  };
+
+  const loginUser = async () => {
+    const requestOption = {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ email: email, password: password }),
+    };
+    fetch("http://localhost:3000/login", requestOption);
   };
 
   // const getUsers = async () => {
@@ -35,26 +45,8 @@ const App = () => {
 
   return (
     <>
-      {/* <Products /> */}
-      {/* <div>
-        <input
-          id="name"
-          placeholder="Name"
-          onKeyUp={(e) => {
-            setName(e.target.value);
-          }}
-        ></input>{" "}
-        <br />
-        <input
-          id="lotteryNo"
-          placeholder="LotteryNo"
-          onKeyUp={(e) => {
-            setlotteryNo(e.target.value);
-          }}
-        ></input>{" "}
-        <br />
-        <button onClick={() => checkInDatabase()}>check</button>
-      </div> */}
+      {/* <Product /> */}
+      <br />
       <div>
         <input
           id="username"
@@ -80,8 +72,8 @@ const App = () => {
           }}
         ></input>{" "}
         <br />
-        <button onClick={() => registerUser()}>Sign In</button>
-        <button onClick={() => checkInDatabase()}>Log In</button>
+        <button onClick={() => registerUser()}>Sign up</button>
+        <button onClick={() => loginUser()}>Log In</button>
       </div>
     </>
   );
