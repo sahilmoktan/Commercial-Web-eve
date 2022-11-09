@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 // import Button from './Button'
-// import Product from "./component/Product";
+import Register from "./Containers/Register";
 
 const App = () => {
   const [name, setName] = useState(" ");
@@ -45,36 +45,8 @@ const App = () => {
 
   return (
     <>
-      {/* <Product /> */}
+      <Register />
       <br />
-      <div>
-        <input
-          id="username"
-          placeholder="Name"
-          onKeyUp={(e) => {
-            setName(e.target.value);
-          }}
-        ></input>{" "}
-        <br />
-        <input
-          id="email"
-          placeholder="Your E-mail"
-          onKeyUp={(e) => {
-            setEmail(e.target.value);
-          }}
-        ></input>{" "}
-        <br />
-        <input
-          id="password"
-          placeholder="Your Password"
-          onKeyUp={(e) => {
-            setPassword(e.target.value);
-          }}
-        ></input>{" "}
-        <br />
-        <button onClick={() => registerUser()}>Sign up</button>
-        <button onClick={() => loginUser()}>Log In</button>
-      </div>
     </>
   );
 };

@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 
 require("dotenv").config();
-console.log(process.env);
+// console.log(process.env);
 const cors = require("cors");
 app.use(cors());
 
@@ -28,17 +28,6 @@ app.use("/login", LoginUser);
 //   res.json({
 //     users: users,
 //   });
-// });
-
-// app.put("/users", async (req, res) => {
-//   const filter = { name: req.body.name };
-//   const update = { isWinner: true };
-//   let data = await Users.findOneAndUpdate(filter, update);
-//   if (data) {
-//     res.json({
-//       message: "updated",
-//     });
-//   }
 // });
 
 app.listen(process.env.PORT, () => {
