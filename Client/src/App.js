@@ -1,36 +1,14 @@
-import { useState } from "react";
+// import { useState } from "react";
 import "./App.css";
 // import Button from './Button'
 import Register from "./Containers/Register";
 
 const App = () => {
-  const [name, setName] = useState(" ");
-  const [email, setEmail] = useState(" ");
-  const [password, setPassword] = useState(" ");
-
   // const checkInDatabase = () => {
   //   fetch(`https://127.0.0.1:3000/users/${name}`);
   //   fetch(`https://127.0.0.1:3000/users/${email}`);
   //   fetch(`https://127.0.0.1:3000/users/${password}`);
   // };
-
-  const registerUser = async () => {
-    const requestOption = {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({ name: name, email: email, password: password }),
-    };
-    fetch("http://localhost:3000/register", requestOption);
-  };
-
-  const loginUser = async () => {
-    const requestOption = {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({ email: email, password: password }),
-    };
-    fetch("http://localhost:3000/login", requestOption);
-  };
 
   // const getUsers = async () => {
   //   const res = await fetch("http://localhost:3000/users");
