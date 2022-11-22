@@ -22,3 +22,7 @@ input.form-control:focus {
 body {
   background-color: #9a616d;
 }
+
+imgbox {
+  width: 50%;
+}

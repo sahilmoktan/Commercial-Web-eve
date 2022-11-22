@@ -3,8 +3,25 @@ import { Formik, Form } from "formik";
 import { TextField } from "./TextField";
 import * as Yup from "yup";
 import rocketImg from "../assets/rocket.png";
+import { useNavigate } from "react-router-dom";
 
 export const Signup = () => {
+  const navigate = useNavigate();
+  const saveParticipants = async (values) => {
+    const requestOption = {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(values),
+    };
+    const response = await fetch(
+      "http://localhost:3000/register",
+      requestOption
+    );
+    const data = await response.json();
+    if (data) {
+      navigate("/");
+    }
+  };
   const validate = Yup.object({
     firstName: Yup.string()
       .min(3, "Must be 15 characters or less")
@@ -36,13 +53,8 @@ export const Signup = () => {
             }}
             validationSchema={validate}
             onSubmit={(values) => {
+              saveParticipants(values);
               // console.log(values);
-              const requestOption = {
-                method: "POST",
-                headers: { "content-type": "application/json" },
-                body: JSON.stringify(values),
-              };
-              fetch("http://localhost:3000/register", requestOption);
             }}
           >
             {(formik) => (
@@ -50,7 +62,7 @@ export const Signup = () => {
                 <h1 className="my-4 font-weight-bold .display-4">Sign Up</h1>
                 <Form>
                   <TextField label="First Name" name="firstName" type="text" />
-                  <TextField label="last Name" name="lastName" type="text" />
+                  <TextField label="Last Name" name="lastName" type="text" />
                   <TextField label="Email" name="email" type="email" />
                   <TextField label="password" name="password" type="password" />
                   <TextField
@@ -71,7 +83,7 @@ export const Signup = () => {
           <div>
             {" "}
             <br />
-            <a>Already have an account? </a>
+            <p>Already have an account? </p> <b> Log In</b>
           </div>
         </div>
         <div className="col-md-7 my-auto">
