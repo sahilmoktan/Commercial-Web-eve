@@ -68,8 +68,10 @@
 // ===============================
 
 import React from "react";
+import { useState } from "react";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
+import "../App.css";
 
 const SignupSchema = Yup.object().shape({
   firstName: Yup.string()
@@ -83,14 +85,42 @@ const SignupSchema = Yup.object().shape({
   email: Yup.string().email("Invalid email").required("Required"),
 });
 
+const [name, setName] = useState(" ");
+const [email, setEmail] = useState(" ");
+const [password, setPassword] = useState(" ");
+
+const registerUser = async () => {
+  const requestOption = {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ name: name, email: email, password: password }),
+  };
+  fetch("http://localhost:3000/register", requestOption);
+};
+
+const loginUser = async () => {
+  const requestOption = {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ email: email, password: password }),
+  };
+  fetch("http://localhost:3000/login", requestOption).then((data) => {
+    if (data.token) {
+      localStorage.setItem("token", data.token);
+
+      // navigate("/Register");
+    }
+  });
+};
+
 export const Register = () => (
   <div>
     <h1>Signup</h1>
     <Formik
       initialValues={{
-        firstName: "name",
-        lastName: "lastname",
-        email: "mail",
+        firstName: "",
+        lastName: "",
+        email: "",
       }}
       Register={SignupSchema}
       onSubmit={(values) => {
@@ -99,18 +129,20 @@ export const Register = () => (
       }}
     >
       {({ errors, touched }) => (
-        <Form>
-          <Field name="firstName" />
+        <Form className="form">
+          <Field name="firstName" placeholder="FirstName" />
           {errors.firstName && touched.firstName ? (
             <div>{errors.firstName}</div>
           ) : null}
-          <Field name="lastName" />
+          <Field name="lastName" placeholder="LastName" />
           {errors.lastName && touched.lastName ? (
             <div>{errors.lastName}</div>
           ) : null}
-          <Field name="email" type="email" />
+          <Field name="email" type="email" placeholder="E-mail" />
           {errors.email && touched.email ? <div>{errors.email}</div> : null}
-          <button type="submit">Submit</button>
+          <button type="submit" onClick={() => registerUser()}>
+            Submit
+          </button>
         </Form>
       )}
     </Formik>

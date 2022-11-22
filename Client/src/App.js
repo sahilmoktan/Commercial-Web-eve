@@ -1,31 +1,20 @@
-// import { useState } from "react";
-import "./App.css";
-// import Button from './Button'
-import Register from "./Containers/Register";
+import './App.css';
+import rocketImg from './assets/rocket.png';
+import { Signup } from './components/Signup';
 
-const App = () => {
-  // const checkInDatabase = () => {
-  //   fetch(`https://127.0.0.1:3000/users/${name}`);
-  //   fetch(`https://127.0.0.1:3000/users/${email}`);
-  //   fetch(`https://127.0.0.1:3000/users/${password}`);
-  // };
-
-  // const getUsers = async () => {
-  //   const res = await fetch("http://localhost:3000/users");
-  //   const data = await res.json();
-  //   // setusersList(data.users);
-  //   console.log(data.users);
-  // };
-
-  // useEffect(() => {
-  //   getUsers();
-  // }, []);
-
+function App() {
   return (
-    <>
-      <Register />
-      <br />
-    </>
+    <div className="container mt-3">
+      <div className="row">
+        <div className="col-md-5">
+          <Signup />
+        </div>
+        <div className="col-md-7 my-auto">
+          <img className="img-fluid w-100" src={rocketImg} alt=""/>
+        </div>
+      </div>
+    </div>
   );
-};
+}
+
 export default App;
