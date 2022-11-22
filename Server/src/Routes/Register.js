@@ -6,7 +6,7 @@ const router = express.Router();
 const Users = require("../Model/User");
 
 router.post("/", (req, res) => {
-  console.log("hrllo", req.body);
+  // console.log("hrllo", req.body);
   // Users.create(req.body);
   // res.json({
   //   message: "registered",
@@ -17,7 +17,7 @@ router.post("/", (req, res) => {
       req.body["password"] = hash;
 
       Users.create(req.body);
-      console.log(req.body);
+      // console.log(req.body);
       // Store hash in your password DB.
     });
     res.json({
