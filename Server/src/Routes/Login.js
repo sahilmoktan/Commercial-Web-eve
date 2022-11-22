@@ -2,7 +2,6 @@ const express = require("express");
 const bcrypt = require("bcrypt");
 const router = express.Router();
 require("dotenv").config();
-// const PORT = 3000;
 // const key = "1234";
 
 const jwt = require("jsonwebtoken");
