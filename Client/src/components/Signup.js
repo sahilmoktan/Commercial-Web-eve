@@ -83,7 +83,7 @@ export const Signup = () => {
           <div>
             {" "}
             <br />
-            <p>Already have an account? </p> <Link to="/"> Log In</Link>
+            <p>Already have an account? </p> <Link to="/Login"> Log In</Link>
           </div>
         </div>
         <div className="col-md-7 my-auto">
