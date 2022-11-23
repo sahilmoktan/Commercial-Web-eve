@@ -23,12 +23,6 @@ const LoginUser = require("./Routes/Login");
 app.use("/register", RegisterUser);
 app.use("/login", LoginUser);
 
-// app.get("/users", async (req, res) => {
-//   const users = await Users.find({});
-//   res.json({
-//     users: users,
-//   });
-// });
 
 app.listen(process.env.PORT, () => {
   console.log(`Example app listening on port ${process.env.PORT}`);

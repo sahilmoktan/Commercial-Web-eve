@@ -2,9 +2,48 @@ import React from "react";
 import { Formik, Form } from "formik";
 import { TextField } from "./TextField";
 import * as Yup from "yup";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setCredentials } from "../reducers/userSlice";
 import rocketImg from "../assets/rocket.png";
 
 export const Login = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const initalValues = {
+    phoneNumber: "",
+    password: "",
+  };
+
+  const onSubmit = (values, { setErrors, resetForm }) => {
+    const requestOptions = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(values),
+    };
+
+    fetch("http://localhost:3000/login", requestOptions)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        if (data.success) {
+          resetForm();
+          console.log(data.userData);
+          navigate("/home");
+          dispatch(setCredentials(data.userData));
+          // ---- login success redirect page ---------- TODO
+        } else {
+          setErrors(data.error);
+        }
+      })
+      .catch((error) => {
+        console.log("Error : " + error);
+      });
+  };
+
   const validate = Yup.object({
     email: Yup.string().email("Email is invalid").required("Email is required"),
     password: Yup.string()
@@ -20,20 +59,9 @@ export const Login = () => {
         </div>
         <div className="col-md-7 my-auto">
           <Formik
-            initialValues={{
-              email: "",
-              password: "",
-            }}
+            initialValues={initalValues}
             validationSchema={validate}
-            onSubmit={(values) => {
-              // console.log(values);
-              const requestOption = {
-                method: "POST",
-                headers: { "content-type": "application/json" },
-                body: JSON.stringify(values),
-              };
-              fetch("http://localhost:3000/register", requestOption);
-            }}
+            onSubmit={onSubmit}
           >
             {(formik) => (
               <div>

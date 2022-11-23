@@ -10,8 +10,8 @@ const Users = require("../Model/User");
 
 router.post("/", async (req, res) => {
   try {
-    const userData = await Users.find({ name: req.body.name });
-    console.log(userData);
+    const userData = await Users.find({ email: req.body.email });
+    // console.log(userData);
     if (userData.length > 0) {
       console.log(userData);
       bcrypt.compare(
