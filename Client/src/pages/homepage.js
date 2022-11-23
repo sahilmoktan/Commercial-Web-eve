@@ -1,27 +1,11 @@
 import React from "react";
 
-// export const Homepage = () => {
-//   return (
-//     <div>
-//       <h1>my home page</h1>
-//     </div>
-//   );
-// };
-
-const Homepage = () => {
-  const store = createStore(rootReducer);
-
+export const Homepage = () => {
   return (
-    <Provider store={store}>
-      {" "}
-      // Set context
+    <div>
       <h1>my home page</h1>
-    </Provider>
+    </div>
   );
-};
-
-const App = () => {
-  const dispatch = useDispatch();
 };
 
 export default Homepage;

@@ -3,7 +3,7 @@ import { Formik, Form } from "formik";
 import { TextField } from "./TextField";
 import * as Yup from "yup";
 import rocketImg from "../assets/rocket.png";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const Signup = () => {
   const navigate = useNavigate();
@@ -83,7 +83,7 @@ export const Signup = () => {
           <div>
             {" "}
             <br />
-            <p>Already have an account? </p> <b> Log In</b>
+            <p>Already have an account? </p> <Link to="/"> Log In</Link>
           </div>
         </div>
         <div className="col-md-7 my-auto">

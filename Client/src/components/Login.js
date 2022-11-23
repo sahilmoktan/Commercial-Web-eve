@@ -24,7 +24,7 @@ export const Login = () => {
       body: JSON.stringify(values),
     };
 
-    fetch("http://localhost:3000/login", requestOptions)
+    fetch("http://localhost:3000/Login", requestOptions)
       .then((response) => {
         return response.json();
       })
