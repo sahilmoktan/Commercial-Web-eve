@@ -81,9 +81,12 @@ export const Signup = () => {
             )}
           </Formik>
           <div>
-            {" "}
             <br />
-            <p>Already have an account? </p> <Link to="/Login"> Log In</Link>
+            <>Already have an account? </>{" "}
+            <Link to="/Login">
+              {" "}
+              <b>Log In </b>
+            </Link>
           </div>
         </div>
         <div className="col-md-7 my-auto">

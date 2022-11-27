@@ -1225,12 +1225,13 @@ Version:1.0
    Hero Area CSS
 ========================================*/
 .hero-slider {
-  background: #fff;
-  overflow: hidden;
+  /* background: #fff; */
+  background-image: url("/public/assets/images/1900x700.png");
+  /* overflow: hidden; */
 }
 .hero-slider .single-slider {
   height: auto;
-  background-image: url("https://via.placeholder.com/1900x700");
+  background-image: url("/public/assets/images/1900x700.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

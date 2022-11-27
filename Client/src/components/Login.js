@@ -2,7 +2,7 @@ import React from "react";
 import { Formik, Form } from "formik";
 import { TextField } from "./TextField";
 import * as Yup from "yup";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setCredentials } from "../reducers/userSlice";
 import rocketImg from "../assets/rocket.png";
@@ -11,7 +11,7 @@ export const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const initalValues = {
-    phoneNumber: "",
+    email: "",
     password: "",
   };
 
@@ -54,10 +54,10 @@ export const Login = () => {
   return (
     <div className="container mt-3">
       <div className="row">
-        <div className="col-md-5">
+        <div className="welcomDiv">
           <img className="img-fluid w-100" src={rocketImg} alt="" />
         </div>
-        <div className="col-md-7 my-auto">
+        <div className="loginDiv">
           <Formik
             initialValues={initalValues}
             validationSchema={validate}
@@ -80,8 +80,11 @@ export const Login = () => {
           <div>
             {" "}
             <br />
-            <b> Forgot Password?</b>
-            <p>or</p> <b> Create an Account </b>
+            <Link to="/register">
+              <b>Create an Account </b>
+            </Link>
+            <br />
+            <>or </> <b> Forgot Password?</b>
           </div>
         </div>
       </div>

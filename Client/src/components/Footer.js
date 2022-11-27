@@ -1,90 +1,91 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
     <>
-      <footer class="footer">
+      <footer className="footer">
         {/* <!-- Footer Top --> */}
-        <div class="footer-top section">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-5 col-md-6 col-12">
+        <div className="footer-top section">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-5 col-md-6 col-12">
                 {/* <!-- Single Widget --> */}
-                <div class="single-footer about">
-                  <div class="logo">
-                    <a href="index.html">
-                      <img src="assets/images/logo2.png" alt="#" />
-                    </a>
+                <div className="single-footer about">
+                  <div className="logo">
+                    <Link to="index.html">
+                      <img src="assets/images/logo2.png" alt="/" />
+                    </Link>
                   </div>
-                  <p class="text">
+                  <p className="text">
                     Praesent dapibus, neque id cursus ucibus, tortor neque
                     egestas augue, magna eros eu erat. Aliquam erat volutpat.
                     Nam dui mi, tincidunt quis, accumsan porttitor, facilisis
                     luctus, metus.
                   </p>
-                  <p class="call">
+                  <p className="call">
                     Got Question? Call us 24/7
                     <span>
-                      <a href="tel:123456789">+0123 456 789</a>
+                      <Link to="tel:123456789">+0123 456 789</Link>
                     </span>
                   </p>
                 </div>
                 {/* <!-- End Single Widget --> */}
               </div>
-              <div class="col-lg-2 col-md-6 col-12">
+              <div className="col-lg-2 col-md-6 col-12">
                 {/* <!-- Single Widget --> */}
-                <div class="single-footer links">
+                <div className="single-footer links">
                   <h4>Information</h4>
                   <ul>
                     <li>
-                      <a href="#">About Us</a>
+                      <Link to="/">About Us</Link>
                     </li>
                     <li>
-                      <a href="#">Faq</a>
+                      <Link to="/">Faq</Link>
                     </li>
                     <li>
-                      <a href="#">Terms & Conditions</a>
+                      <Link to="/">Terms & Conditions</Link>
                     </li>
                     <li>
-                      <a href="#">Contact Us</a>
+                      <Link to="/">Contact Us</Link>
                     </li>
                     <li>
-                      <a href="#">Help</a>
+                      <Link to="/">Help</Link>
                     </li>
                   </ul>
                 </div>
                 {/* <!-- End Single Widget --> */}
               </div>
-              <div class="col-lg-2 col-md-6 col-12">
+              <div className="col-lg-2 col-md-6 col-12">
                 {/* <!-- Single Widget --> */}
-                <div class="single-footer links">
+                <div className="single-footer links">
                   <h4>Customer Service</h4>
                   <ul>
                     <li>
-                      <a href="#">Payment Methods</a>
+                      <Link to="/">Payment Methods</Link>
                     </li>
                     <li>
-                      <a href="#">Money-back</a>
+                      <Link to="/">Money-back</Link>
                     </li>
                     <li>
-                      <a href="#">Returns</a>
+                      <Link to="/">Returns</Link>
                     </li>
                     <li>
-                      <a href="#">Shipping</a>
+                      <Link to="/">Shipping</Link>
                     </li>
                     <li>
-                      <a href="#">Privacy Policy</a>
+                      <Link to="/">Privacy Policy</Link>
                     </li>
                   </ul>
                 </div>
                 {/* <!-- End Single Widget --> */}
               </div>
-              <div class="col-lg-3 col-md-6 col-12">
+              <div className="col-lg-3 col-md-6 col-12">
                 {/* <!-- Single Widget --> */}
-                <div class="single-footer social">
+                <div className="single-footer social">
                   <h4>Get In Tuch</h4>
                   {/* <!-- Single Widget --> */}
-                  <div class="contact">
+                  <div className="contact">
                     <ul>
                       <li>NO. 342 - London Oxford Street.</li>
                       <li>012 United Kingdom.</li>
@@ -95,24 +96,24 @@ function Footer() {
                   {/* <!-- End Single Widget --> */}
                   <ul>
                     <li>
-                      <a href="#">
-                        <i class="ti-facebook"></i>
-                      </a>
+                      <Link to="/">
+                        <i className="ti-facebook"></i>
+                      </Link>
                     </li>
                     <li>
-                      <a href="#">
-                        <i class="ti-twitter"></i>
-                      </a>
+                      <Link to="/">
+                        <i className="ti-twitter"></i>
+                      </Link>
                     </li>
                     <li>
-                      <a href="#">
-                        <i class="ti-flickr"></i>
-                      </a>
+                      <Link to="/">
+                        <i className="ti-flickr"></i>
+                      </Link>
                     </li>
                     <li>
-                      <a href="#">
-                        <i class="ti-instagram"></i>
-                      </a>
+                      <Link to="/">
+                        <i className="ti-instagram"></i>
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -122,24 +123,24 @@ function Footer() {
           </div>
         </div>
         {/* <!-- End Footer Top --> */}
-        <div class="copyright">
-          <div class="container">
-            <div class="inner">
-              <div class="row">
-                <div class="col-lg-6 col-12">
-                  <div class="left">
+        <div className="copyright">
+          <div className="container">
+            <div className="inner">
+              <div className="row">
+                <div className="col-lg-6 col-12">
+                  <div className="left">
                     <p>
                       Copyright © 2020{" "}
-                      <a href="http://www.wpthemesgrid.com" target="_blank">
+                      <Link to="http://www.wpthemesgrid.com" target="_blank">
                         Wpthemesgrid
-                      </a>{" "}
+                      </Link>{" "}
                       - All Rights Reserved.
                     </p>
                   </div>
                 </div>
-                <div class="col-lg-6 col-12">
-                  <div class="right">
-                    <img src="images/payments.png" alt="#" />
+                <div className="col-lg-6 col-12">
+                  <div className="right">
+                    <img src="images/payments.png" alt="/" />
                   </div>
                 </div>
               </div>

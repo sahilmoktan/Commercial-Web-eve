@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -31,14 +32,15 @@ function Navbar() {
                     </li>
                     <li>
                       <i className="ti-alarm-clock"></i>{" "}
-                      <a href="#">Daily deal</a>
+                      <Link to="/home">Daily deal</Link>
                     </li>
                     <li>
-                      <i className="ti-user"></i> <a href="#">My account</a>
+                      <i className="ti-user"></i>{" "}
+                      <Link to="/home">My account</Link>
                     </li>
                     <li>
                       <i className="ti-power-off"></i>
-                      <a href="login.html#">Logout</a>
+                      <Link to="login.html/">Logout</Link>
                     </li>
                   </ul>
                 </div>
@@ -54,17 +56,17 @@ function Navbar() {
               <div className="col-lg-2 col-md-2 col-12">
                 {/* <!-- Logo --> */}
                 <div className="logo">
-                  <a href="index.html">
+                  <Link to="index.html">
                     <img src="assets/images/logo.png" alt="logo" />
-                  </a>
+                  </Link>
                 </div>
                 {/* <!--/ End Logo --> */}
                 {/* <!-- Search Form --> */}
                 <div className="search-top">
                   <div className="top-search">
-                    <a href="#0">
+                    <Link to="/0">
                       <i className="ti-search"></i>
-                    </a>
+                    </Link>
                   </div>
                   {/* <!-- Search Form --> */}
                   <div className="search-top">
@@ -110,64 +112,64 @@ function Navbar() {
                 <div className="right-bar">
                   {/* <!-- Search Form --> */}
                   <div className="sinlge-bar">
-                    <a href="#" className="single-icon">
+                    <Link to="/home" className="single-icon">
                       <i className="fa fa-heart-o" aria-hidden="true"></i>
-                    </a>
+                    </Link>
                   </div>
                   <div className="sinlge-bar">
-                    <a href="#" className="single-icon">
+                    <Link to="/home" className="single-icon">
                       <i className="fa fa-user-circle-o" aria-hidden="true"></i>
-                    </a>
+                    </Link>
                   </div>
                   <div className="sinlge-bar shopping">
-                    <a href="#" className="single-icon">
+                    <Link to="/home" className="single-icon">
                       <i className="ti-bag"></i>{" "}
                       <span className="total-count">2</span>
-                    </a>
+                    </Link>
                     {/* <!-- Shopping Item --> */}
                     <div className="shopping-item">
                       <div className="dropdown-cart-header">
                         <span>2 Items</span>
-                        <a href="#">View Cart</a>
+                        <Link to="/home">View Cart</Link>
                       </div>
                       <ul className="shopping-list">
                         <li>
-                          <a
-                            href="#"
+                          <Link
+                            to="/home"
                             className="remove"
                             title="Remove this item"
                           >
                             <i className="fa fa-remove"></i>
-                          </a>
-                          <a className="cart-img" href="#">
+                          </Link>
+                          <Link className="cart-img" to="/home">
                             <img
                               src="https://via.placeholder.com/70x70"
-                              alt="#"
+                              alt="/home"
                             />
-                          </a>
+                          </Link>
                           <h4>
-                            <a href="#">Woman Ring</a>
+                            <Link to="/home">Woman Ring</Link>
                           </h4>
                           <p className="quantity">
                             1x - <span className="amount">$99.00</span>
                           </p>
                         </li>
                         <li>
-                          <a
-                            href="#"
+                          <Link
+                            to="/home"
                             className="remove"
                             title="Remove this item"
                           >
                             <i className="fa fa-remove"></i>
-                          </a>
-                          <a className="cart-img" href="#">
+                          </Link>
+                          <Link className="cart-img" to="/home">
                             <img
                               src="https://via.placeholder.com/70x70"
-                              alt="#"
+                              alt="/home"
                             />
-                          </a>
+                          </Link>
                           <h4>
-                            <a href="#">Woman Necklace</a>
+                            <Link to="/home">Woman Necklace</Link>
                           </h4>
                           <p className="quantity">
                             1x - <span className="amount">$35.00</span>
@@ -179,9 +181,9 @@ function Navbar() {
                           <span>Total</span>
                           <span className="total-amount">$134.00</span>
                         </div>
-                        <a href="checkout.html" className="btn animate">
+                        <Link to="checkout.html" className="btn animate">
                           Checkout
-                        </a>
+                        </Link>
                       </div>
                     </div>
                     {/* <!--/ End Shopping Item --> */}
@@ -204,45 +206,45 @@ function Navbar() {
                         <div className="nav-inner">
                           <ul className="nav main-menu menu navbar-nav">
                             <li className="active">
-                              <a href="#">Home</a>
+                              <Link to="/home">Home</Link>
                             </li>
                             <li>
-                              <a href="#">Product</a>
+                              <Link to="/home">Product</Link>
                             </li>
                             <li>
-                              <a href="#">Service</a>
+                              <Link to="/home">Service</Link>
                             </li>
                             <li>
-                              <a href="#">
+                              <Link to="/home">
                                 Shop<i className="ti-angle-down"></i>
                                 <span className="new">New</span>
-                              </a>
+                              </Link>
                               <ul className="dropdown">
                                 <li>
-                                  <a href="cart.html">Cart</a>
+                                  <Link to="cart.html">Cart</Link>
                                 </li>
                                 <li>
-                                  <a href="checkout.html">Checkout</a>
+                                  <Link to="checkout.html">Checkout</Link>
                                 </li>
                               </ul>
                             </li>
                             <li>
-                              <a href="#">Pages</a>
+                              <Link to="/home">Pages</Link>
                             </li>
                             <li>
-                              <a href="#">
+                              <Link to="/home">
                                 Blog<i className="ti-angle-down"></i>
-                              </a>
+                              </Link>
                               <ul className="dropdown">
                                 <li>
-                                  <a href="blog-single-sidebar.html">
+                                  <Link to="blog-single-sidebar.html">
                                     Blog Single Sidebar
-                                  </a>
+                                  </Link>
                                 </li>
                               </ul>
                             </li>
                             <li>
-                              <a href="contact.html">Contact Us</a>
+                              <Link to="contact.html">Contact Us</Link>
                             </li>
                           </ul>
                         </div>

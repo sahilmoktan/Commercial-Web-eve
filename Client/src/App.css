@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/* @import url("../public/assets/images/1900x700.png"); */
 
 body {
   font-family: "Roboto", sans-serif;
@@ -23,6 +24,16 @@ body {
   background-color: #9a616d;
 }
 
-boxmy {
-  width: 50%;
+.welcomDiv {
+  flex: 0 0 58%;
+  max-width: 58%;
 }
+
+.loginDiv {
+  flex: 0 0 40%;
+  max-width: 45%;
+}
+
+/* .vvvDiv {
+  background-image: url("../public/assets/images/1900x700.png");
+} */
