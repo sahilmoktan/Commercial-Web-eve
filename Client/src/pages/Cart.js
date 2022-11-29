@@ -1,24 +1,20 @@
 import React from "react";
-import Featuresales from "../components/Featuresales";
+import CartSection from "../components/CartSection";
 import Footer from "../components/Footer";
-import MainBanner from "../components/MainBanner";
 import Navbar from "../components/Navbar";
 import Shopservices from "../components/Shopservices";
 import Subscribe from "../components/Subscribe";
-import TrendingItem from "../components/TrendingItem";
 
-export const Homepage = () => {
+function Cart() {
   return (
     <>
       <Navbar />
-      <MainBanner />
-      <Featuresales />
-      <TrendingItem />
+      <CartSection />
       <Shopservices />
       <Subscribe />
       <Footer />
     </>
   );
-};
+}
 
-export default Homepage;
+export default Cart;

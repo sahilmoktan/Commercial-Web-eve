@@ -27,7 +27,7 @@ function Navbar() {
                       <i className="ti-headphone-alt"></i> +977 9863022025
                     </li>
                     <li>
-                      <i className="ti-email"></i> mail@bajesales.com.np
+                      <i className="ti-email"></i> info@bajesales.com.np
                     </li>
                   </ul>
                 </div>
@@ -99,7 +99,7 @@ function Navbar() {
               <div className="col-lg-8 col-md-7 col-12">
                 <div className="search-bar-top">
                   <div className="search-bar">
-                    <select>
+                    <select className="nice-select">
                       <option selected="selected">All Category</option>
                       <option>watch</option>
                       <option>mobile</option>
@@ -219,19 +219,18 @@ function Navbar() {
                               <Link to="/home">Home</Link>
                             </li>
                             <li>
-                              <Link to="/home">Product</Link>
+                              <Link to="/Product">Product</Link>
                             </li>
                             <li>
-                              <Link to="/home">About</Link>
+                              <Link to="/About">About</Link>
                             </li>
                             <li>
-                              <Link to="/home">
+                              <Link to="#">
                                 Shop<i className="ti-angle-down"></i>
-                                <span className="new">New</span>
                               </Link>
                               <ul className="dropdown">
                                 <li>
-                                  <Link to="/cart">Cart</Link>
+                                  <Link to="/Cart">Cart</Link>
                                 </li>
                                 <li>
                                   <Link to="/checkout">Checkout</Link>
@@ -240,7 +239,7 @@ function Navbar() {
                             </li>
 
                             <li>
-                              <Link to="contact.html">Contact Us</Link>
+                              <Link to="/ContactUs">Contact Us</Link>
                             </li>
                           </ul>
                         </div>

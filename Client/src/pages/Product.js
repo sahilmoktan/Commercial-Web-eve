@@ -1,24 +1,25 @@
 import React from "react";
-import Featuresales from "../components/Featuresales";
 import Footer from "../components/Footer";
 import MainBanner from "../components/MainBanner";
 import Navbar from "../components/Navbar";
+
+import ShopItems from "../components/ShopItems";
 import Shopservices from "../components/Shopservices";
 import Subscribe from "../components/Subscribe";
 import TrendingItem from "../components/TrendingItem";
 
-export const Homepage = () => {
+function Product() {
   return (
     <>
       <Navbar />
       <MainBanner />
-      <Featuresales />
+      <ShopItems />
       <TrendingItem />
       <Shopservices />
       <Subscribe />
       <Footer />
     </>
   );
-};
+}
 
-export default Homepage;
+export default Product;

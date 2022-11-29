@@ -24,9 +24,9 @@ function Footer() {
                     luctus, metus.
                   </p>
                   <p className="call">
-                    Got Question? Call us 24/7
+                    Got Question? Call us
                     <span>
-                      <Link to="tel:123456789">+0123 456 789</Link>
+                      <Link to="tel:123456789">+977 9851234567</Link>
                     </span>
                   </p>
                 </div>
@@ -38,7 +38,7 @@ function Footer() {
                   <h4>Information</h4>
                   <ul>
                     <li>
-                      <Link to="/">About Us</Link>
+                      <Link to="/About">About Us</Link>
                     </li>
                     <li>
                       <Link to="/">Faq</Link>
@@ -83,14 +83,14 @@ function Footer() {
               <div className="col-lg-3 col-md-6 col-12">
                 {/* <!-- Single Widget --> */}
                 <div className="single-footer social">
-                  <h4>Get In Tuch</h4>
+                  <h4>Get In Touch</h4>
                   {/* <!-- Single Widget --> */}
                   <div className="contact">
                     <ul>
-                      <li>NO. 342 - London Oxford Street.</li>
-                      <li>012 United Kingdom.</li>
-                      <li>info@eshop.com</li>
-                      <li>+032 3456 7890</li>
+                      <li>Anamnagar -28, </li>
+                      <li>Kathmandu, Nepal</li>
+                      <li>info@bajesales.com.np</li>
+                      <li>+977 9801234567</li>
                     </ul>
                   </div>
                   {/* <!-- End Single Widget --> */}
@@ -131,8 +131,8 @@ function Footer() {
                   <div className="left">
                     <p>
                       Copyright © 2020{" "}
-                      <Link to="http://www.wpthemesgrid.com" target="_blank">
-                        Wpthemesgrid
+                      <Link to="home" target="_blank">
+                        Sahil Moktan
                       </Link>{" "}
                       - All Rights Reserved.
                     </p>
