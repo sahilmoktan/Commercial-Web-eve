@@ -1,3 +1,68 @@
-.background {
-  background-image: url("/src/assets/1900x700.png");
+.main-box {
+  position: relative;
+  width: 100vw;
+  height: 60vh;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgDiv {
+  position: relative;
+  width: 80%;
+  height: 100%;
+
+  background-image: url("../assets/1900x700.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  /* display: inline-block; */
+}
+
+.bannertext {
+  padding: 0 20%;
+  margin-top: 10%;
+}
+
+.bannertext h1 {
+  line-height: 50px;
+  font-size: 47px;
+  font-weight: 650;
+  color: #f7941d;
+  margin-bottom: 15px;
+}
+
+.bannertext h1 span {
+  font-size: 20px;
+  display: block;
+  margin-bottom: 12px;
+  color: #333;
+  font-weight: 700;
+  line-height: initial;
+}
+.bannertext p {
+  color: #333;
+  margin-bottom: 35px;
+}
+.bannertext .button {
+  margin: 0;
+}
+.bannertext .button {
+  color: #fff;
+  background: #333;
+  padding: 13px 10px;
+  line-height: initial;
+  border: none;
+  height: auto;
+  z-index: 0;
+  width: 99px;
+  align-items: center;
+  align-content: center;
+}
+.bannertext .button:hover {
+  background: #f7941d;
+  color: #fff;
 }

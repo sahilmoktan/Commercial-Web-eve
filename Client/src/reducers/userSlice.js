@@ -11,19 +11,18 @@ const userSlice = createSlice({
   initialState,
   reducers: {
     setCredentials: (state, actions) => {
-      const { email, password, token } = actions.payload;
-      state.email = email;
-      state.password = password;
-      state.token = token;
+      state.email = actions.payload.email;
+      state.phoneNumber = actions.payload.phoneNumber;
+      state.token = actions.payload.token;
     },
-    setLogout: (state) => {
-      state.email = null;
-      state.password = null;
-      state.token = null;
+    resetCredentials: (state, actions) => {
+      state.email = "";
+      state.phoneNumber = "";
+      state.token = "";
     },
   },
 });
 
-export const { setCredentials, setLogout } = userSlice.actions;
+export const { setCredentials, resetCredentials } = userSlice.actions;
 
 export default userSlice.reducer;

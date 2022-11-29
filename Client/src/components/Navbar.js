@@ -1,7 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// import { useDispatch } from "react-redux";
+// import { useNavigate } from "react-router-dom";
+// import { resetCredentials } from "../reducers/userSlice";
 
 function Navbar() {
+  // const TriggerLogout = () => {
+  //   const dispatch = useDispatch();
+  //   const navigate = useNavigate();
+
+  //   dispatch(resetCredentials());
+  //   navigate("/");
+  // };
   return (
     <>
       <header className="header shop">
@@ -124,7 +134,7 @@ function Navbar() {
                   <div className="sinlge-bar shopping">
                     <Link to="/home" className="single-icon">
                       <i className="ti-bag"></i>{" "}
-                      <span className="total-count">2</span>
+                      <span className="total-count">4</span>
                     </Link>
                     {/* <!-- Shopping Item --> */}
                     <div className="shopping-item">
@@ -212,7 +222,7 @@ function Navbar() {
                               <Link to="/home">Product</Link>
                             </li>
                             <li>
-                              <Link to="/home">Service</Link>
+                              <Link to="/home">About</Link>
                             </li>
                             <li>
                               <Link to="/home">
@@ -221,28 +231,14 @@ function Navbar() {
                               </Link>
                               <ul className="dropdown">
                                 <li>
-                                  <Link to="cart.html">Cart</Link>
+                                  <Link to="/cart">Cart</Link>
                                 </li>
                                 <li>
-                                  <Link to="checkout.html">Checkout</Link>
+                                  <Link to="/checkout">Checkout</Link>
                                 </li>
                               </ul>
                             </li>
-                            <li>
-                              <Link to="/home">Pages</Link>
-                            </li>
-                            <li>
-                              <Link to="/home">
-                                Blog<i className="ti-angle-down"></i>
-                              </Link>
-                              <ul className="dropdown">
-                                <li>
-                                  <Link to="blog-single-sidebar.html">
-                                    Blog Single Sidebar
-                                  </Link>
-                                </li>
-                              </ul>
-                            </li>
+
                             <li>
                               <Link to="contact.html">Contact Us</Link>
                             </li>

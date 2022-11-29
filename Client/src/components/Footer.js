@@ -140,7 +140,7 @@ function Footer() {
                 </div>
                 <div className="col-lg-6 col-12">
                   <div className="right">
-                    <img src="images/payments.png" alt="/" />
+                    <img src="assets/images/payments.png" alt="/" />
                   </div>
                 </div>
               </div>

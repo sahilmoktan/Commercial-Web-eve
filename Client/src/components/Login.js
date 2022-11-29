@@ -5,6 +5,7 @@ import * as Yup from "yup";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setCredentials } from "../reducers/userSlice";
+import ShowHidePassword from "../../src/components/showHidePassword";
 import rocketImg from "../assets/rocket.png";
 
 export const Login = () => {
@@ -21,7 +22,7 @@ export const Login = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(values),
+      body: JSON.stringify({ email: values.email, password: values.password }),
     };
 
     fetch("http://localhost:3000/Login", requestOptions)
@@ -69,7 +70,12 @@ export const Login = () => {
 
                 <Form>
                   <TextField label="Email" name="email" type="email" />
-                  <TextField label="password" name="password" type="password" />
+                  <TextField
+                    label="password"
+                    name="password"
+                    type="password"
+                    component={ShowHidePassword}
+                  />
                   <button className="btn btn-dark mt-3" type="submit">
                     Log In
                   </button>
