@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import { Link } from "react-router-dom";
 
 function ContactUs() {
   return (
@@ -110,14 +111,14 @@ function ContactUs() {
                     <h4 className="title">Email:</h4>
                     <ul>
                       <li>
-                        <a href="mailto:info@yourwebsite.com">
+                        <Link to="mailto:info@yourwebsite.com">
                           info@bajesales.com.np.com
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="mailto:info@yourwebsite.com">
+                        <Link to="mailto:info@yourwebsite.com">
                           support@bajesales.com.np.com
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -136,6 +137,7 @@ function ContactUs() {
       </section>
       <br />
       <iframe
+        title="myFrame"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.64769152936!2d85.32964585!3d27.697281800000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19a364bb5935%3A0xf40b4cf2c78cf48a!2sAnamnagar%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1669753585295!5m2!1sen!2snp"
         width="100%"
         height="450"

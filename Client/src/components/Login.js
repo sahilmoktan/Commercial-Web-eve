@@ -5,7 +5,7 @@ import * as Yup from "yup";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setCredentials } from "../reducers/userSlice";
-import ShowHidePassword from "../../src/components/showHidePassword";
+// import ShowHidePassword from "./ShowHidePassword";
 import rocketImg from "../assets/rocket.png";
 
 export const Login = () => {
@@ -74,7 +74,7 @@ export const Login = () => {
                     label="password"
                     name="password"
                     type="password"
-                    component={ShowHidePassword}
+                    // component={ShowHidePassword}
                   />
                   <button className="btn btn-dark mt-3" type="submit">
                     Log In
