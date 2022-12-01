@@ -23,6 +23,7 @@ export const Login = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ email: values.email, password: values.password }),
+      
     };
 
     fetch("http://localhost:3000/Login", requestOptions)

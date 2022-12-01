@@ -8,6 +8,7 @@ import About from "./pages/About";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import ContactUs from "./pages/ContactUs";
+import ProductUpload from "./pages/ProductUpload";
 // import Header from "./components/Header";
 import ErrorPage from "./pages/ErrorPage";
 
@@ -25,6 +26,7 @@ function App() {
         <Route path="/Cart" element={<Cart />} />
         <Route path="/Checkout" element={<Checkout />} />
         <Route path="/ContactUs" element={<ContactUs />} />
+        <Route path="/ProductUpload" element={<ProductUpload />} />
         {/* <Route path="/singleproduct/:id" element={<SingleProduct />} /> */}
         <Route path="*" element={<ErrorPage />} />
       </Routes>
