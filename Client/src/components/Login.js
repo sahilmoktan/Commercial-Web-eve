@@ -26,19 +26,12 @@ export const Login = () => {
     };
 
     fetch("http://localhost:3000/Login", requestOptions)
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        if (data.success) {
-          resetForm();
-          console.log(data.userData);
-          navigate("/home");
-          dispatch(setCredentials(data.userData));
-          // ---- login success redirect page ---------- TODO
-        } else {
-          setErrors(data.error);
-        }
+      //    .then(alert(`${values.username} - Login Successfully`))
+      .then(resetForm())
+      // .then(setSubmitting(false))
+      .then((res) => res.json())
+      .then((result) => {
+        navigate("/home");
       })
       .catch((error) => {
         console.log("Error : " + error);

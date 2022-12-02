@@ -5,18 +5,18 @@ function CartSection() {
   return (
     <>
       {/* Breadcrumbs */}
-      <div classNameName="breadcrumbs">
-        <div classNameName="container">
-          <div classNameName="row">
-            <div classNameName="col-12">
-              <div classNameName="bread-inner">
-                <ul classNameName="bread-list">
+      <div class="breadcrumbs">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="bread-inner">
+                <ul class="bread-list">
                   <li>
-                    <Link to="/home">
-                      Home<i classNameName="ti-arrow-right"></i>
+                    <Link to="index1.html">
+                      Home<i class="ti-arrow-right"></i>
                     </Link>
                   </li>
-                  <li classNameName="active">
+                  <li class="active">
                     <Link to="/Cart">Cart</Link>
                   </li>
                 </ul>
@@ -272,8 +272,8 @@ function CartSection() {
                         </li>
                       </ul>
                       <div className="button5">
-                        <Link to="/Checkout" className="btn">
-                          Checkout
+                        <Link to="/Cart" className="btn">
+                          Cart
                         </Link>
                         <Link to="#" className="btn">
                           Continue shopping

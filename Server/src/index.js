@@ -2,14 +2,8 @@ const express = require("express");
 const app = express();
 
 require("dotenv").config();
-// console.log(process.env);
 const cors = require("cors");
 app.use(cors());
-
-const jwt = require("jsonwebtoken");
-
-const bcrypt = require("bcrypt");
-const saltRounds = 10;
 
 const bodyParser = require("body-parser");
 app.use(bodyParser.json());
@@ -22,7 +16,6 @@ const LoginUser = require("./Routes/Login");
 
 app.use("/register", RegisterUser);
 app.use("/login", LoginUser);
-
 
 app.listen(process.env.PORT, () => {
   console.log(`Example app listening on port ${process.env.PORT}`);

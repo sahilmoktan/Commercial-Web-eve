@@ -83,7 +83,7 @@ export const Signup = () => {
           <div>
             <br />
             <>Already have an account? </>{" "}
-            <Link to="/Login">
+            <Link to="/">
               {" "}
               <b>Log In </b>
             </Link>
